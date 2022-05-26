@@ -11,7 +11,7 @@
 	<groupId>com.evandrorenan</groupId>
 	<artifactId>spring-playground</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>spring-playground</name>
 	<description>Spring Playground</description>
 	<properties>
