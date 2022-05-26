@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-playground
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-playground
+  template:
+    metadata:
+      labels:
+        app: spring-playground
+    spec:
+      containers:
+      - name: spring-playground
+        image: registry.gitlab.com/evandorenan/docker-image-spring-playground
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: registry.gitlab.com

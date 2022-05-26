@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MainController {
-	
+
 	@GetMapping("/hello")
 	public String getHello()  {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		return "Hello " + sdf.format(new Date(System.currentTimeMillis()));
 	}
-
 }
