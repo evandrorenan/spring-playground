@@ -7,6 +7,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 
 @Data
 @AllArgsConstructor
@@ -16,8 +17,11 @@ public class Message {
 	private String sender;
 	private String password;
 	private String intendedRecipient;
+	
 	@Getter(value = AccessLevel.NONE)
+	@Setter(value = AccessLevel.PUBLIC)
 	private Long messageTime = 0L;
+	
 	private Integer messageNumber = 0;
 	
 	public String getMessageTime() {
