@@ -11,6 +11,6 @@ import lombok.Data;
 @Data
 public class Chat {
 	
-	private List <Messages> chat = new ArrayList<>();
+	private List <Message> messages = new ArrayList<>();
 
 }
